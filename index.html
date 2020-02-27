@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat:500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/index.js" type="module"></script>
+    <title>Task Manager</title>
+</head>
+<body>
+
+    <div class="popup-box hide" id="create-project-popup">
+        <div class="bg-overlay"></div>        
+        <div class="popup-content">
+            <div class="popup-header">
+                Create A New Project
+            </div>
+            <div class="popup-body">
+                <label class="label-text" for="project-name">Name</label>
+                <input class="text-input" type="text" name="" id="project-name">
+                <label class="label-text m-t-md" for="project-description">Description</label>
+                <textarea class="textarea" name="" rows="6" id="project-description"></textarea>
+                <div class="text-right m-t-md">
+                    <a class="btn btn-secondary close">Cancel</a>
+                    <a class="btn" id="create-project--js">Create</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="popup-box hide" id="add-column-popup">
+        <div class="bg-overlay"></div>        
+        <div class="popup-content">
+            <div class="popup-header">
+                Add a New Column
+            </div>
+            <div class="popup-body">
+                <label class="label-text" for="column-name">Name</label>
+                <input class="text-input" type="text" name="" id="column-name">
+                <div class="text-right m-t-md">
+                    <a class="btn btn-secondary close">Cancel</a>
+                    <a class="btn" id="create-column--js">Create</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="header-bar">
+            <div class="row">
+                <img class="logo" src="img/logo.png" alt="TaskManager">
+                <div class="search">
+                    <input type="search" value="" placeholder="Search for tasks...">
+                </div>
+                <div class="actions">
+                    <a href="#" class="btn"><i class="fas fa-cog"></i> Settings</a>
+                    <a href="#" class="btn"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+                </div>
+            </div>
+            <div class="tabs">
+                <ul class="tab-header">
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="project-content">
+        </div>
+    </main>
+</body>
+</html>
