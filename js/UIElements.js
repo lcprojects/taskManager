@@ -26,7 +26,7 @@ export default {
     projectTimerStart: '.start--js',
     projectNewColumn: '.add-new-column',
     projectAddColumnBtn: '.add-column--js',
-    projectdeleteColumnBtn: '.delete-column--js',
+    projectDeleteColumnBtn: '.delete-column-btn--js',
     projectCreateColumnBtn: '#create-column--js',
     projectColumnName: '#column-name',
     projectNewTask: '.new-task',

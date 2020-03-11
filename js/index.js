@@ -119,11 +119,11 @@ window.addEventListener('load', function() {
 
     document.querySelectorAll(UI.projectContent).forEach(el => {
         el.addEventListener('click', (e) => {
-            if (e.target.matches(`${UI.projectdeleteColumnBtn}, ${UI.projectdeleteColumnBtn} *`)) {
+            if (e.target.matches(`${UI.projectDeleteColumnBtn}, ${UI.projectDeleteColumnBtn} *`)) {
                 const columnId = Number(e.target.closest(UI.projectColumn).dataset.columnid);
                 
                 state.projects[state.currentProject].deleteColumn(columnId);
-
+this.console.log(columnId)
                 columnView.removeColumn(columnId);
             }
         });
@@ -334,7 +334,7 @@ window.addEventListener('load', function() {
         if (e.target.matches(`${UI.projectEditTask}, ${UI.projectEditTask} *`)) {
             const columnId = Number(e.target.closest(UI.projectColumn).dataset.columnid);
             const taskId = e.target.closest(UI.projectTask).dataset.taskid;
-            
+
             const task = state.projects[state.currentProject].getTaskById(taskId, columnId);
 
             taskView.toggleEditTask(task, taskId, columnId);

@@ -128,7 +128,7 @@ export const changeState = (nextState, taskId, columnId) => {
 
 export const updateTask = (task, columnId) => {
     document.querySelector(`${UI.projectColumn}[data-columnId="${columnId}"] ${UI.projectTask}[data-taskId="${task.id}"]`).outerHTML = renderTask(task);
-    document.querySelector(`${UI.projectColumn}[data-columnId="${columnId}"] .edit-task--js`).remove();
+    document.querySelector(`${UI.projectColumn}[data-columnId="${columnId}"] .edit-task--js[data-taskid="${task.id}"]`).remove();
     document.querySelector(`${UI.projectColumn}[data-columnId="${columnId}"] ${UI.projectTask}[data-taskId="${task.id}"]`).classList.remove('hide');
 }
 
@@ -183,8 +183,8 @@ export const toggleEditTask = (task, taskId, columnId) => {
                 <div class="btn btn-xs m-r-sm add-label--js"><i class="fas fa-tag"></i></div>
                 <a class="btn btn-xs m-r-sm set-time--js"><i class="fa fa-clock"></i></a>
                 <input class="m-r-sm add-time-input">
-                ${task.duration ? `<div class="duration"><i class="far fa-clock"></i> ${taskView.displayDuration(task.duration)}</div>` : ''}
-                <a href="#" class="btn btn-xs m-l-a save-task--js"><i class="fa fa-plus"></i></a>
+                ${task.duration ? `<div class="duration"><i class="far fa-clock"></i> ${displayDuration(task.duration)}</div>` : ''}
+                <a class="btn btn-xs m-l-a save-task--js"><i class="fa fa-plus"></i></a>
             </div>
         </div>
     `;
